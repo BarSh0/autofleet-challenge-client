@@ -14,7 +14,7 @@ export const VehiclesProvider = ({ children }: any) => {
   const [mapZoom, setMapZoom] = useState(13);
 
   const { isLoading, error, data } = useQuery('vehicles', async () => {
-    const response = await axios.get('http://localhost:3333/');
+    const response = await axios.get('https://autofleet-challenge.onrender.com/');
     return response.data;
   });
 

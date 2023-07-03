@@ -22,9 +22,9 @@ type Vehicle = {
 const Sidebar = () => {
   const { path } = React.useContext(VehiclesContext);
   const [sortedData, setSortedData] = useState<Vehicle[] | null>(null);
-  const [sortOption, setSortOption] = useState<'default' | 'ascending' | 'descending'>('default');
+  const [, setSortOption] = useState<'default' | 'ascending' | 'descending'>('default');
   const { isLoading, error, data, refetch } = useQuery('vehiclesByPolygon', async () => {
-    const response = await axios.post('http://localhost:3333/by-polygon', { polygon: path });
+    const response = await axios.post('https://autofleet-challenge.onrender.com/by-polygon', { polygon: path });
     return response.data;
   });
 

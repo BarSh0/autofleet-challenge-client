@@ -1,0 +1,6 @@
+.navbar {
+  grid-area: navbar;
+  padding: 0 2rem;
+  background-color: #000000;
+  color: #f0f0f0;
+}

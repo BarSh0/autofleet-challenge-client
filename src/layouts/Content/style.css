@@ -1,0 +1,17 @@
+.content {
+  flex: 1;
+  padding: 5px;
+  grid-area: content;
+  background-color: #f0f0f0;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  line-height: 1.6;
+}

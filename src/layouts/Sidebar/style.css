@@ -1,0 +1,50 @@
+.sidebar {
+  width: 20vw;
+  background-color: #f0f0f0;
+  padding: 20px;
+  grid-area: menu;
+  margin: 0.5rem;
+  overflow: auto;
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+button {
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  background-color: transparent;
+  border: none;
+  padding: 0.3rem 1.2rem;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.sidebar li:hover {
+  background-color: #ccc;
+}
+
+.sidebar p {
+  margin: 0.5rem;
+}

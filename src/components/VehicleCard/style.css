@@ -1,0 +1,21 @@
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+}
+
+.online {
+  color: green;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.in-ride {
+  color: orange;
+  text-transform: uppercase;
+  font-weight: bold;
+}

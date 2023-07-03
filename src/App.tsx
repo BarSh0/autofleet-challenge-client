@@ -1,10 +1,9 @@
-import axios from 'axios';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
+import { VehiclesProvider } from './context/vehiclesContext';
 import Content from './layouts/Content';
 import Header from './layouts/Header';
 import Sidebar from './layouts/Sidebar';
-import { VehiclesProvider } from './context/vehiclesContext';
 
 const queryClient = new QueryClient();
 

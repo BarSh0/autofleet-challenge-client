@@ -8,3 +8,13 @@
   height: 100%;
   width: 100%;
 }
+
+.delete-button {
+  position: absolute;
+  z-index: 9;
+  background: white;
+  font-size: 1rem;
+  padding: 0.8rem;
+  top: 105px;
+  font-weight: bold;
+}

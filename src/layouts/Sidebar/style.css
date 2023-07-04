@@ -1,5 +1,5 @@
 .sidebar {
-  width: 20vw;
+  width: auto;
   background-color: #f0f0f0;
   padding: 20px;
   grid-area: menu;
@@ -11,7 +11,9 @@
 
 .sidebar-header {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
 }

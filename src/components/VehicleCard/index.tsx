@@ -23,8 +23,12 @@ const VehicleCard = ({ vehicle }: VehicleCardProps) => {
         </div>
         <p className={vehicle.state}>{vehicle.state}</p>
       </div>
-      <p>Distance: {vehicle.distance}</p>
-      <p>{vehicle.seats} Seats</p>
+      <div className="card-header">
+        <p>Distance: {vehicle.distance}</p>
+        <p>
+          <b>{vehicle.seats}</b> Seats
+        </p>
+      </div>
     </li>
   );
 };

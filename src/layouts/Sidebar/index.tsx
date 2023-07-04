@@ -1,8 +1,8 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import { VehiclesContext } from '../../context/vehiclesContext';
 import VehicleCard from '../../components/VehicleCard';
+import { VehiclesContext } from '../../context/vehiclesContext';
+import axiosinstance from '../../utils/axios';
 import './style.css';
 
 type Vehicle = {
@@ -24,7 +24,7 @@ const Sidebar = () => {
   const [sortedData, setSortedData] = useState<Vehicle[] | null>(null);
   const [, setSortOption] = useState<'default' | 'ascending' | 'descending'>('default');
   const { isLoading, error, data, refetch } = useQuery('vehiclesByPolygon', async () => {
-    const response = await axios.post('https://autofleet-challenge.onrender.com/by-polygon', { polygon: path });
+    const response = await axiosinstance.post('by-polygon', { polygon: path });
     return response.data;
   });
 

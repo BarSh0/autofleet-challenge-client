@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { createContext, useState } from 'react';
 import { useQuery } from 'react-query';
+import axiosinstance from '../utils/axios';
 
 export const VehiclesContext = createContext({} as any);
 
@@ -14,7 +14,7 @@ export const VehiclesProvider = ({ children }: any) => {
   const [mapZoom, setMapZoom] = useState(13);
 
   const { isLoading, error, data } = useQuery('vehicles', async () => {
-    const response = await axios.get('https://autofleet-challenge.onrender.com/');
+    const response = await axiosinstance.get('');
     return response.data;
   });
 

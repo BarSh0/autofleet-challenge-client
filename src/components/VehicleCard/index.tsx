@@ -8,14 +8,15 @@ type VehicleCardProps = {
 };
 
 const VehicleCard = ({ vehicle }: VehicleCardProps) => {
-  const { setMapCenter, setMapZoom } = React.useContext(VehiclesContext);
+  const { setMapCenter, setMapZoom, setCurrentMarker } = React.useContext(VehiclesContext);
 
-  const changeMapCenter = () => {
+  const handleOnClick = () => {
+    setCurrentMarker(vehicle.id);
     setMapCenter({ lat: vehicle.location.lat, lng: vehicle.location.lng });
     setMapZoom(15);
   };
   return (
-    <li key={vehicle.id} onClick={changeMapCenter}>
+    <li key={vehicle.id} onClick={handleOnClick}>
       <div className="card-header">
         <div className="card-icon">
           <img src={Image} width={'60rem'} alt={vehicle.state} />

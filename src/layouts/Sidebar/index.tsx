@@ -20,17 +20,17 @@ type Vehicle = {
 };
 
 const Sidebar = () => {
-  const { path } = React.useContext(VehiclesContext);
+  const { polygons } = React.useContext(VehiclesContext);
   const [sortedData, setSortedData] = useState<Vehicle[] | null>(null);
   const [, setSortOption] = useState<'default' | 'ascending' | 'descending'>('default');
   const { isLoading, error, data, refetch } = useQuery('vehiclesByPolygon', async () => {
-    const response = await axiosinstance.post('by-polygon', { polygon: path });
+    const response = await axiosinstance.post('by-polygon', { polygons });
     return response.data;
   });
 
   React.useEffect(() => {
     refetch();
-  }, [path, refetch]);
+  }, [polygons, refetch]);
 
   const sortByStatus = (option: 'default' | 'ascending' | 'descending') => {
     let sortedByStatus = [...data];
